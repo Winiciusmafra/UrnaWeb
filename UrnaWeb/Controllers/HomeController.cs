@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using UrnaWeb.Models;
+using UrnaWeb.Models.ViewModels;
 
 namespace UrnaWeb.Controllers
 {

@@ -1,6 +1,6 @@
 using System;
 
-namespace UrnaWeb.Models
+namespace UrnaWeb.Models.ViewModels
 {
     public class ErrorViewModel
     {
