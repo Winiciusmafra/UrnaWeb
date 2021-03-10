@@ -37,7 +37,8 @@ namespace UrnaWeb
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddDbContext<UrnaWebContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("UrnaWebContext")));
+                    options.UseMySql(Configuration.GetConnectionString("UrnaWebContext"), builder =>
+                    builder.MigrationsAssembly("UrnaWeb")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

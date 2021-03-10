@@ -14,6 +14,6 @@ namespace UrnaWeb.Data
         {
         }
 
-        public DbSet<UrnaWeb.Models.Candidate> Candidate { get; set; }
+        public DbSet<Candidate> Candidate { get; set; }
     }
 }
