@@ -9,18 +9,18 @@ namespace UrnaWeb.Models
     {
         public int Id { get; set; }
         public DateTime DateRegister { get; set; }
-        public Candidate IdCanditade { get; set; }
+        public Candidate CandidateId { get; set; }
 
 
         public Vote()
         {
         }
 
-        public Vote(int id, DateTime dateRegister, Candidate idCanditade)
+        public Vote(int id, DateTime dateRegister, Candidate candidateId)
         {
             Id = id;
             DateRegister = dateRegister;
-            IdCanditade = idCanditade;
+            candidateId = CandidateId;
         }
     }
 }

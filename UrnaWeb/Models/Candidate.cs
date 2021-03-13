@@ -30,6 +30,7 @@ namespace UrnaWeb.Models
         public void AddVotes(Vote v)
         {
             Votes.Add(v);
+           
         }
 
         //public double TotalVotes(DateTime initial, DateTime final)
