@@ -1,9 +1,39 @@
-﻿@*
-*@
+﻿@model IEnumerable<UrnaWeb.Models.Vote>
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Votes";
 }
 
-<h1>Index Vote</h1>
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdCanditade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateRegister)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdCanditade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateRegister)
+            </td>
+
+        </tr>
+        }
+    </tbody>
+</table>
 
 

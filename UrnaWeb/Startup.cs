@@ -11,7 +11,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using UrnaWeb.Data;
-
+using UrnaWeb.Services;
 namespace UrnaWeb
 {
     public class Startup
@@ -39,6 +39,7 @@ namespace UrnaWeb
             services.AddDbContext<UrnaWebContext>(options =>
                     options.UseMySql(Configuration.GetConnectionString("UrnaWebContext"), builder =>
                     builder.MigrationsAssembly("UrnaWeb")));
+            services.AddScoped<VoteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
