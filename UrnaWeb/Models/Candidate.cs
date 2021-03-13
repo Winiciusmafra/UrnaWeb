@@ -8,6 +8,7 @@ namespace UrnaWeb.Models
     public class Candidate
     {
         public int Id { get; set; }
+        public string Nome { get; set; }
         public string VicePresident { get; set; }
         public DateTime DateRegister { get; set; }
         public int subtitle { get; set; }

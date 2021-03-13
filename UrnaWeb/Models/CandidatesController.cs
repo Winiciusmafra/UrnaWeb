@@ -53,7 +53,7 @@ namespace UrnaWeb.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,VicePresident,DateRegister,subtitle")] Candidate candidate)
+        public async Task<IActionResult> Create([Bind("Id,Nome,VicePresident,DateRegister,subtitle")] Candidate candidate)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace UrnaWeb.Models
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,VicePresident,DateRegister,subtitle")] Candidate candidate)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,VicePresident,DateRegister,subtitle")] Candidate candidate)
         {
             if (id != candidate.Id)
             {
