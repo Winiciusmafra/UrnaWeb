@@ -1,0 +1,27 @@
+﻿.urna_container {
+    width: 720px;
+    height: 400px;
+    border: 2px solid black;
+    text-align:center;
+    margin:30px auto;
+}
+
+.urna {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+
+}
+.urna_digitacao{
+}
+
+.teclas {
+    border: 2px solid black;
+}
+.teclado1{
+    margin: 0 auto;
+    width:130px;
+}
+
+
+

@@ -22,5 +22,12 @@ namespace UrnaWeb.Services
             return _context.Vote.ToList();
         }
 
+        public void InsetVote(Vote obj)
+        {
+            
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
+
     }
 }

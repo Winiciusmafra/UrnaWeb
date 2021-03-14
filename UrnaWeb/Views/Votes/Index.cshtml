@@ -3,37 +3,61 @@
     ViewData["Title"] = "Votes";
 }
 
-<table class="table table-striped table-hover">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.CandidateId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateRegister)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.CandidateId)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DateRegister)
-            </td>
 
-        </tr>
-        }
-    </tbody>
-</table>
+<div class="urna_container">
+    <div class="urna">
+        <div class="urna_votacao">
+
+            <h1>Vote para presidente</h1>
+            <p>Número:</p>
+            <form action="">
+                <input size="1" id="campo1" value="" maxlength="1" type="text" readonly="readonly" />
+                <input size="1" id="campo2" value="" maxlength="1" type="text" readonly="readonly" />
+            </form>
+            <div class="urna_dados_candidato">
+
+                @*@Html.DisplayNameFor(model => model.CandidateId)
+
+                    @Html.DisplayNameFor(model => model.Id)
+
+                    @Html.DisplayNameFor(model => model.DateRegister)
+
+                        @foreach (var item in Model)
+                    {
+                        @Html.DisplayFor(modelItem => item.CandidateId)
+
+                        @Html.DisplayFor(modelItem => item.Id)
+
+                        @Html.DisplayFor(modelItem => item.DateRegister)
+                    }*@
+            </div>
+        </div>
+        <div class="urna_digitacao">
+            <div class="urna_justica">
+                <b>JUSTIÇA<br>ELEITORAL</b>
+            </div>
+            <div class="teclas">
+                <div class="teclado1">
+                    <button class="btn btn-default" onclick="inserir(1)">1</button>
+                    <button class="btn btn-default" onclick="inserir(2)">2</button>
+                    <button class="btn btn-default" onclick="inserir(3)">3</button>
+                    <button class="btn btn-default" onclick="inserir(4)">4</button>
+                    <button class="btn btn-default" onclick="inserir(5)">5</button>
+                    <button class="btn btn-default" onclick="inserir(6)">6</button>
+                    <button class="btn btn-default" onclick="inserir(7)">7</button>
+                    <button class="btn btn-default" onclick="inserir(8)">8</button>
+                    <button class="btn btn-default" onclick="inserir(9)">9</button>
+                    <button class="btn btn-default" onclick="inserir(0)">0</button>
+                </div>
+
+            </div>
+            <div class="teclado2">
+                <button class="branco  click">BRANCO</button>
+                <button class="laranja  click" onclick="corrige()">CORRIGE</button>
+                <button class="verde" onclick="votar()">CONFIRMA</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
