@@ -63,7 +63,7 @@ namespace UrnaWeb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Votes}/{action=Index}/{id?}");
             });
         }
     }
