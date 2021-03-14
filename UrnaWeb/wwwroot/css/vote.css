@@ -2,26 +2,48 @@
     width: 720px;
     height: 400px;
     border: 2px solid black;
-    text-align:center;
-    margin:30px auto;
+    text-align: center;
+    margin: 30px auto;
+    background-color: gray;
 }
 
 .urna {
     display: flex;
-    flex-direction:row;
-    justify-content:space-between;
-
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
 }
-.urna_digitacao{
+.urna_container input{
+    color:black;
+}
+
+.urna_digitacao {
+    
+   
+}
+.urna_justica{
+
+    padding: 10%;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.urna_votacao{
+    width: 200px;
+    margin: 0 auto;
 }
 
 .teclas {
-    border: 2px solid black;
-}
-.teclado1{
-    margin: 0 auto;
-    width:130px;
+    margin-bottom:10px;
+    height: 200px;
 }
 
+.teclado1 {
+    margin: auto auto;
+    width: 130px;
+    font-size:30px;
+}
 
-
+.teclado2{
+    margin-right:8px;
+}
