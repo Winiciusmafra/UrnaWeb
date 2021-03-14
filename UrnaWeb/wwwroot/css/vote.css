@@ -1,0 +1,53 @@
+﻿.urna_container {
+    width: 720px;
+    height: 400px;
+    border: 2px solid black;
+    text-align: center;
+    margin: 30px auto;
+    background-color: gray;
+}
+
+.urna {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: white;
+}
+.urna_container input{
+    color:black;
+    text-align:center;
+}
+
+.urna_digitacao {
+    
+   
+}
+.urna_justica{
+
+    padding: 7%;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.urna_votacao{
+    width: 200px;
+    margin: 0 auto;
+}
+.urna_votacao h1{
+    font-size: 30px;
+}
+
+.teclas {
+    margin-bottom:34px;
+    height: 200px;
+}
+
+.teclado1 {
+    margin: auto auto;
+    width: 130px;
+    font-size:30px;
+}
+
+.teclado2{
+    margin-right:8px;
+}

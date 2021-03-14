@@ -1,0 +1,63 @@
+﻿@model IEnumerable<UrnaWeb.Models.Vote>
+@{
+    ViewData["Title"] = "Votes";
+}
+
+
+<div class="urna_container">
+    <div class="urna">
+        <div class="urna_votacao">
+
+            <h1>VOTE PARA PRESIDENTE</h1>
+            <p>Número:</p>
+            <form action="">
+                <input size="1" id="campo1" value="" maxlength="1" type="text" readonly="readonly" />
+                <input size="1" id="campo2" value="" maxlength="1" type="text" readonly="readonly" />
+            </form>
+            <div class="urna_dados_candidato">
+
+                @*@Html.DisplayNameFor(model => model.CandidateId)
+
+                    @Html.DisplayNameFor(model => model.Id)
+
+                    @Html.DisplayNameFor(model => model.DateRegister)
+
+                        @foreach (var item in Model)
+                    {
+                        @Html.DisplayFor(modelItem => item.CandidateId)
+
+                        @Html.DisplayFor(modelItem => item.Id)
+
+                        @Html.DisplayFor(modelItem => item.DateRegister)
+                    }*@
+            </div>
+        </div>
+        <div class="urna_digitacao">
+            <div class="urna_justica">
+                <b>JUSTIÇA<br>ELEITORAL</b>
+            </div>
+            <div class="teclas">
+                <div class="teclado1">
+                    <button class="btn btn-default" onclick="inserir(1)">1</button>
+                    <button class="btn btn-default" onclick="inserir(2)">2</button>
+                    <button class="btn btn-default" onclick="inserir(3)">3</button>
+                    <button class="btn btn-default" onclick="inserir(4)">4</button>
+                    <button class="btn btn-default" onclick="inserir(5)">5</button>
+                    <button class="btn btn-default" onclick="inserir(6)">6</button>
+                    <button class="btn btn-default" onclick="inserir(7)">7</button>
+                    <button class="btn btn-default" onclick="inserir(8)">8</button>
+                    <button class="btn btn-default" onclick="inserir(9)">9</button>
+                    <button class="btn btn-default" onclick="inserir(0)">0</button>
+                </div>
+
+            </div>
+            <div class="teclado2">
+                <button class="btn btn-default">BRANCO</button>
+                <button class="btn btn-danger" onclick="corrige()">CORRIGE</button>
+                <button class="btn btn-success" onclick="votar()">CONFIRMA</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
