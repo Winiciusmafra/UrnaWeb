@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using UrnaWeb.Data;
+using System.Globalization;
+using System.Threading;
 
 namespace UrnaWeb.Models
 {
@@ -55,6 +57,8 @@ namespace UrnaWeb.Models
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,VicePresident,DateRegister,subtitle")] Candidate candidate)
         {
+            DateTime datenow = DateTime.Now;
+            candidate.DateRegister = datenow;
             if (ModelState.IsValid)
             {
                 _context.Add(candidate);
