@@ -12,7 +12,9 @@ namespace UrnaWeb.Models
         public string VicePresident { get; set; }
         public DateTime DateRegister { get; set; }
         public int subtitle { get; set; }
-        public ICollection<Vote> Votes { get; set; } = new List<Vote>();
+        public int VoteId { get; set; }
+      
+        public ICollection<Vote> Votes { get; set; }
     
         public Candidate()
         {

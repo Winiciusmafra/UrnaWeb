@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UrnaWeb.Models;
+using UrnaWeb.Models.ViewModels;
 using UrnaWeb.Services;
 
 namespace UrnaWeb.Controllers
@@ -21,13 +19,13 @@ namespace UrnaWeb.Controllers
         }
         public IActionResult Index()
         {
-            var list = _voteService.FindAll();
-            return View(list);
+            return View();
         }
 
         public IActionResult Create()
         {
-            return View();
+            var candidates = _voteService.FindAll();
+            return View(candidates);
         }
 
         [HttpPost]
