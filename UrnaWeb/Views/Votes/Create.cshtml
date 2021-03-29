@@ -1,4 +1,4 @@
-﻿@model UrnaWeb.Models.Candidate
+﻿@model UrnaWeb.Models.ViewModels.VoteViewModel
 @{
 }
 
@@ -7,8 +7,8 @@
 
 <form asp-action="Create">
     <div class="form-group">
-        <label asp-for="subtitle" class="control-label"></label>
-        <input asp-for="subtitle" class="form-control" />
+        <label asp-for="Candidate.subtitle" class="control-label"></label>
+        <select asp-for="Candidate.VoteId" asp-items="@(new SelectList(Model.Candidates,"Id", "CandidateId"))" class="form-control"></select>
     </div>
     <div class="form-group">
         <input type="submit" value="Confirme" class="btn btn-success" />

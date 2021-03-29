@@ -9,6 +9,7 @@ namespace UrnaWeb.Models
     {
         public int Id { get; set; }
         public DateTime DateRegister { get; set; }
+        public int Amount { get; set; }
         public Candidate CandidateId { get; set; }
 
 

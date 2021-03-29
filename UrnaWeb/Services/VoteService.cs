@@ -11,6 +11,7 @@ namespace UrnaWeb.Services
     public class VoteService
     {
         private readonly UrnaWebContext _context;
+       
 
         public VoteService(UrnaWebContext context)
         {
@@ -19,7 +20,7 @@ namespace UrnaWeb.Services
 
         public List<Vote> FindAll()
         {
-            return _context.Vote.ToList();
+            return _context.Vote.OrderBy(x => x.Amount).ToList();
         }
 
         public void InsetVote(Vote obj)
@@ -28,6 +29,7 @@ namespace UrnaWeb.Services
             _context.Add(obj);
             _context.SaveChanges();
         }
+
 
     }
 }
